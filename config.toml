@@ -1,0 +1,6 @@
+theme = "onedark"
+
+[keys.normal]
+[keys.normal."space"]
+e = ":sh zellij run --close-on-exit --name 'File Tree' --floating -- ~/.cargo/bin/sidetree"
+#e = ":sh tmux display-popup -E ~/.cargo/bin/sidetree"
