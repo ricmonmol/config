@@ -1,0 +1,39 @@
+# sidetree
+# https://github.com/topisani/sidetree
+# https://github.com/topisani/sidetree/blob/master/sidetreerc
+
+# General ──────────────────────────────────────────────────────────────────────
+
+set show_hidden false
+set quit_on_open true
+set open_cmd 'zellij action toggle-floating-panes && zellij action "write-chars" ":open ${sidetree_entry}" && zellij action write 13'
+#set open_cmd 'tmux send-keys -t $(tmux list-panes | grep active | cut -d: -f1) ":open ${sidetree_entry}" Enter'
+
+# Appearance ───────────────────────────────────────────────────────────────────
+
+set file_icons true
+set icon_style darkgray
+set dir_name_style lightgreen
+set file_name_style reset
+set highlight_style +r
+set link_style cyan+b
+
+# Mappings ─────────────────────────────────────────────────────────────────────
+
+# map <c-c> quit
+map q quit
+map H cd ..
+map L cd
+map o mk
+map c rename
+map d rm
+
+# Example Integrations ─────────────────────────────────────────────────────────
+
+# set open_cmd 'kcr open "${sidetree_entry}"'
+# map ! shell 'nohup alacritty --class popup --working-directory "${sidetree_dir}" < /dev/null > /dev/null 2>&1 &'
+# map $ shell 'nohup tmux display-popup -d "${sidetree_dir}" -E < /dev/null > /dev/null 2>&1 &'
+# map / shell 'kcr send cd "${sidetree_dir}"'
+# map e shell 'kcr edit "${sidetree_entry}"'
+# map x shell 'arc unarchive "${sidetree_entry}"'
+# map m shell 'nohup mpv -no-terminal "${sidetree_entry}" < /dev/null > /dev/null 2>&1 &'
