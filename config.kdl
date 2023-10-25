@@ -209,7 +209,7 @@ plugins {
 //   - true (default)
 //   - false
 //
-// pane_frames true
+pane_frames false
 
 // Toggle between having Zellij lay out panes according to a predefined set of layouts whenever possible
 // Options:
@@ -237,11 +237,10 @@ plugins {
 //         white 255 255 255
 //     }
 // }
-
 // Choose the theme that is specified in the themes section.
 // Default: default
 //
-theme "tokyo-night-dark"
+theme "catppuccin-mocha"
 
 // The name of the default layout to load on startup
 // Default: "default"
